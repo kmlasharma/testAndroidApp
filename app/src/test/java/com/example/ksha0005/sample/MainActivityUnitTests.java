@@ -1,26 +1,18 @@
 package com.example.ksha0005.sample;
 
-import android.test.suitebuilder.annotation.SmallTest;
-import junit.framework.TestCase;
+import org.junit.Test;
 
 /**
- * Created by ksha0005 on 21/06/2016.
+ * Main activity unit tests.
  */
-public class MainActivityUnitTests extends TestCase {
-    @Override
-    protected void setUp() throws Exception {
-        super.setUp();
+public class MainActivityUnitTests {
+
+    @Test
+    public void testChecker() {
+        //MainActivity ma = new MainActivity();
+        //ma.setupVariables();
+        System.out.println("Test Checker");
+        //assertNotNull(ma.username);
     }
 
-    @SmallTest
-    public void checker() {
-        MainActivity ma = new MainActivity();
-        ma.setupVariables();
-        System.out.println(ma.username);
-        assertNotNull(ma.username);
-    }
-    @Override
-    protected void tearDown() throws Exception {
-        super.tearDown();
-    }
 }
