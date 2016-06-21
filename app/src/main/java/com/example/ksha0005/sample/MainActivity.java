@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void authenticateLogin(View view) {
 
-        if (checkLogin(username.getText().toString(), username.getText().toString()))
+        if (checkLogin(username.getText().toString(), password.getText().toString()))
         {
             Toast.makeText(getApplicationContext(), getString(R.string.successfulLoginIn), Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this, WelcomeActivity.class);
