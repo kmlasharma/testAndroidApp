@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Example Application</string>
+    <string name="titleText">Log into Application</string>
+    <string name="usernameLabel">Username:</string>
+    <string name="passwordLabel">Password:</string>
+    <string name="attemptsLabel">Attempts Left:</string>
+    <string name="successfulLoginIn">You Have logged in.</string>
+    <string name="failedLoginIn">Login Failure.</string>
+    <string name="logOutLabel">Log out here</string>
+    <string name="lockedLabel">Account locked.</string>
+    <string name="outOfAttemptsLabel">You are out of attempts!</string>
+    <string name="posOption">OK</string>
+    <string name="positveMessage">You clicked OK</string>
+
+
+</resources>

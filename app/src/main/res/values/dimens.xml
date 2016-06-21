@@ -1,0 +1,17 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="layout_marginTop_username">75dp</dimen>
+    <dimen name="layout_marginLeft_username">10dp</dimen>
+
+    <dimen name="layout_marginLeft_usernameTextField">35dp</dimen>
+
+    <dimen name="layout_marginTop_password">40dp</dimen>
+    <dimen name="attemptsLabelDim">30dp</dimen>
+    <dimen name="TitleMargin">20dp</dimen>
+    <dimen name="attemptsMarginTop">48dp</dimen>
+    <dimen name="buttonMarginTop">94dp</dimen>
+    <dimen name="lockedTextMarginTop">35dp</dimen>
+</resources>
