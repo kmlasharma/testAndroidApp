@@ -11,10 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+
 public class MainActivity extends AppCompatActivity {
-
-
-
 
     public EditText username;
     public EditText password;
@@ -34,21 +32,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void authenticateLogin(View view) {
-        if (username.getText().toString().equals(USERNAME) &&
-                password.getText().toString().equals(PASSWORD)) {
-            Toast.makeText(getApplicationContext(), getString(R.string.successfulLoginIn),
-                    Toast.LENGTH_SHORT).show();
+
+        if (checkLogin(username.getText().toString(), username.getText().toString()))
+        {
+            Toast.makeText(getApplicationContext(), getString(R.string.successfulLoginIn), Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this, WelcomeActivity.class);
             startActivity(intent);
-        } else {
+        }
+        else
+        {
             Toast.makeText(getApplicationContext(), getString(R.string.failedLoginIn),
                     Toast.LENGTH_SHORT).show();
-            numberOfRemainingLoginAttempts--;
+            numberOfRemainingLoginAttempts = updateAttempt(numberOfRemainingLoginAttempts);
             attemptsLeftTV.setVisibility(View.VISIBLE);
             numberOfRemainingLoginAttemptsTV.setVisibility(View.VISIBLE);
             numberOfRemainingLoginAttemptsTV.setText(Integer.toString(numberOfRemainingLoginAttempts));
 
-            if (numberOfRemainingLoginAttempts == 0) {
+            if (checkAttempt(numberOfRemainingLoginAttempts))
+            {
                 openPopUp();
                 login.setEnabled(false);
                 loginLockedTV.setVisibility(View.VISIBLE);
@@ -57,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+
 
     public void setupVariables() {
         username = (EditText) findViewById(R.id.usernameET);
@@ -83,5 +86,21 @@ public class MainActivity extends AppCompatActivity {
         alertDialog.show();
 
     }
+
+    public int updateAttempt(int attempt) {
+        attempt--;
+        return attempt;
+    }
+
+    public boolean checkAttempt(int attempt) {
+        return (attempt == 0);
+    }
+
+    public boolean checkLogin(String name, String password) {
+        if (name.equals(USERNAME) && password.equals(PASSWORD))
+            return true;
+        return false;
+    }
+
 
 }
